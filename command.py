@@ -27,7 +27,7 @@ def help(bot, update):
 def deposit(bot, update):
 	user = update.message.from_user.username
 	if user is None:
-		bot.send_message(chat_id=update.message.chat_id, text="Please set a telegram username in your profile settings!")
+		bot.send_message(chat_id=update.message.chat_id, text="Bitte setzte einen Telegram Username in deinem Profil!")
 	else:
 		address = "/usr/local/bin/reddcoind"
 		result = subprocess.run([address,"getaccountaddress",user],stdout=subprocess.PIPE)
